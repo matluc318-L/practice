@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contador</title>
+</head>
+<body>
+    <h1 id="contador">0</h1>
+    <button id="restar">-</button>
+    <button id="reiniciar">reiniciar</button>
+    <button id="sumar">+</button>
+    <script>
+        let numero = 0;
+        const contador= document.getElementById("contador")   
+        const sumar = document.getElementById("sumar")
+        const restar = document.getElementById("restar")
+        const reiniciar = document.getElementById("reiniciar")
+
+        sumar.addEventListener("click", () => {
+            numero ++;
+            contador.textContent = numero;
+        });
+        restar.addEventListener("click", () => {
+            numero --;
+            contador.textContent = numero;
+        });
+        reiniciar.addEventListener("click", () => {
+            numero = 0;
+            contador.textContent = numero;
+        });
+    </script>
+</body>
+</html>
